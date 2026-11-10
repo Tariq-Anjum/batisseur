@@ -1,0 +1,43 @@
+{
+  "clarify": [
+    "Product"
+  ],
+  "research": [
+    "Discovery"
+  ],
+  "explore": [
+    "Discovery"
+  ],
+  "design": [
+    "Architecture"
+  ],
+  "plan": [
+    "Planning"
+  ],
+  "implement": [
+    "Build"
+  ],
+  "setup": [
+    "Build"
+  ],
+  "debug": [
+    "Debug"
+  ],
+  "verify": [
+    "Verification",
+    "Quality"
+  ],
+  "review": [
+    "Security",
+    "Audit"
+  ],
+  "deliver": [
+    "Delivery"
+  ],
+  "document": [
+    "Maintenance"
+  ],
+  "handoff": [],
+  "answer": [],
+  "unclear": []
+}

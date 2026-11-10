@@ -1,0 +1,11 @@
+   Compiling batisseur v0.1.0 ([checkout])
+error: environment variable `CARGO_BIN_EXE_batisseur` not defined at compile time
+ --> tests/cli.rs:3:58
+  |
+3 | fn run(args:&[&str])->std::process::Output {Command::new(env!("CARGO_BIN_EXE_batisseur")).args(args).output().unwrap()}
+  |                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = help: `CARGO_BIN_EXE_batisseur` may not be available for the current Cargo target
+  = help: Cargo sets build script variables at run time. Use `std::env::var("CARGO_BIN_EXE_batisseur")` instead
+
+error: could not compile `batisseur` (test "cli") due to 1 previous error

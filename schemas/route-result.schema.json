@@ -1,0 +1,258 @@
+{
+  "type": "object",
+  "properties": {
+    "taxonomy_version": {
+      "const": "tt-1.1.0"
+    },
+    "route_status": {
+      "enum": [
+        "ok",
+        "needs_information"
+      ]
+    },
+    "task_type": {
+      "enum": [
+        "clarify",
+        "design",
+        "plan",
+        "implement",
+        "debug",
+        "verify",
+        "review",
+        "deliver",
+        "document",
+        "research",
+        "explore",
+        "setup",
+        "handoff",
+        "answer",
+        "unclear",
+        "unknown",
+        null
+      ]
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_pack": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_verifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pack": {
+            "type": "string"
+          },
+          "score": {
+            "type": "integer"
+          },
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "term": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "integer"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "term",
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "pack",
+          "score",
+          "terms"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rejected": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pack": {
+            "type": "string"
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "pack",
+          "reasons"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tie_margin": {
+      "const": 3
+    },
+    "confidence": {
+      "enum": [
+        "insufficient",
+        "typed",
+        "typed_unique"
+      ]
+    },
+    "risk_gate": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "allowed",
+            "requires_authorization",
+            "not_evaluated"
+          ]
+        },
+        "missing_permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "missing_permissions",
+        "reasons"
+      ],
+      "additionalProperties": false
+    },
+    "plan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "task_type": {
+            "enum": [
+              "clarify",
+              "design",
+              "plan",
+              "implement",
+              "debug",
+              "verify",
+              "review",
+              "deliver",
+              "document",
+              "research",
+              "explore",
+              "setup",
+              "handoff",
+              "answer",
+              "unclear"
+            ]
+          },
+          "workflow": {
+            "type": "string"
+          },
+          "stages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pack": {
+            "type": "string"
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "executable": {
+            "const": false
+          }
+        },
+        "required": [
+          "id",
+          "task_type",
+          "workflow",
+          "stages",
+          "pack",
+          "depends_on",
+          "executable"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "taxonomy_version",
+    "route_status",
+    "task_type",
+    "families",
+    "selected_pack",
+    "capabilities",
+    "required_verifiers",
+    "missing_fields",
+    "candidates",
+    "rejected",
+    "reasons",
+    "tie_margin",
+    "confidence",
+    "risk_gate",
+    "plan"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://batisseur.invalid/schemas/route-result.schema.json",
+  "title": "RouteResult v0.1"
+}

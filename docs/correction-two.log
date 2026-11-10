@@ -1,0 +1,57 @@
+   Compiling batisseur v0.1.0 ([checkout])
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.42s
+     Running unittests src/lib.rs (target/debug/deps/batisseur-2b6876e25cc478d3)
+
+running 2 tests
+test tests::scoring_terms_are_signed_and_additive ... ok
+test tests::abstention_is_empty_and_deterministic ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/batisseur-904da6c92082da6e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/buildbench.rs (target/debug/deps/buildbench-c67d544bde8fa74a)
+
+running 1 test
+test frozen_oracles_match_routes_and_schemas ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/cli.rs (target/debug/deps/cli-838da33fa17bacf5)
+
+running 3 tests
+test lists_and_shows_embedded_packs ... ok
+test file_routing_validation_and_error_streams ... ok
+test frozen_benchmark_and_three_process_runs ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s
+
+     Running tests/routing.rs (target/debug/deps/routing-6026b8809be243d2)
+
+running 12 tests
+test contradictory_interaction_is_not_accepted ... ok
+test rejects_taxonomy_mismatch ... ok
+test unknown_required_fields_abstain ... ok
+test review_requires_finished_work ... ok
+test unclear_abstains ... ok
+test unmodeled_hard_limits_require_information ... ok
+test no_authority_is_inferred ... ok
+test refuses_bad_types_and_unknown_properties ... ok
+test interaction_collision_abstains ... ok
+test preserves_type_over_work_kind ... ok
+test routes_with_explained_scores ... ok
+test serialization_is_identical_across_three_runs ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests batisseur
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+BuildBench: 16/16 correct (100.0%); abstentions 4/4; unexpected activations 0; deterministic three runs 16/16; verification 16/16; risk gates 16/16

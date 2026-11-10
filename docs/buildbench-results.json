@@ -1,0 +1,99 @@
+{
+  "accuracy_percent": 100.0,
+  "cases": [
+    {
+      "deterministic_three_runs": true,
+      "id": "android-tv",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "android-tablet",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "macos-desktop",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "linux-kiosk-touch",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "web-pwa",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "cli-linux",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "daemon-linux",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "browser-extension",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "existing-app-bug",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "security-audit",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "reverse-unknown-electron",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "api-library-unsupported",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "android-alone",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "touch-panel-collision",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "rpi-native-hmi",
+      "passed": true
+    },
+    {
+      "deterministic_three_runs": true,
+      "id": "ha-panel-design",
+      "passed": true
+    }
+  ],
+  "context_bytes": 27267,
+  "correct": 16,
+  "correct_abstentions": 4,
+  "deterministic_three_runs": 16,
+  "expected_abstentions": 4,
+  "latency_ms": null,
+  "measurement_notes": "context_bytes counts benchmark, taxonomy and intent schema only; token/latency instrumentation is out of scope",
+  "passed": true,
+  "risk_gate_matches": 16,
+  "suite": "buildbench-v0",
+  "tokens": null,
+  "total": 16,
+  "unexpected_activations": 0,
+  "verification_matches": 16
+}

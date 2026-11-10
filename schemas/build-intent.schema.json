@@ -1,0 +1,496 @@
+{
+  "type": "object",
+  "properties": {
+    "taxonomy_version": {
+      "const": "tt-1.1.0"
+    },
+    "task_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "clarify",
+        "design",
+        "plan",
+        "implement",
+        "debug",
+        "verify",
+        "review",
+        "deliver",
+        "document",
+        "research",
+        "explore",
+        "setup",
+        "handoff",
+        "answer",
+        "unclear",
+        "unknown",
+        null
+      ]
+    },
+    "artifact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "code",
+        "interface",
+        "system",
+        "agent",
+        "docs",
+        "none",
+        "unknown",
+        null
+      ]
+    },
+    "work_kind": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "new_product",
+        "feature",
+        "bug",
+        "audit",
+        "reconstruction",
+        "migration",
+        "modernization",
+        "prototype",
+        "unknown",
+        null
+      ]
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "platform": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "android",
+            "macos",
+            "linux",
+            "web",
+            "browser",
+            "windows",
+            "ios",
+            "unknown",
+            null
+          ]
+        },
+        "os": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "android",
+            "macos",
+            "linux",
+            "browser",
+            "windows",
+            "ios",
+            "unknown",
+            null
+          ]
+        },
+        "form_factor": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "tv",
+            "tablet",
+            "desktop",
+            "kiosk",
+            "browser",
+            "terminal",
+            "server",
+            "library",
+            "unknown",
+            null
+          ]
+        },
+        "display_env": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "screen",
+            "headless",
+            "unknown",
+            null
+          ]
+        },
+        "deployment_env": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "local",
+            "browser",
+            "extension",
+            "service",
+            "store",
+            "unknown",
+            null
+          ]
+        }
+      },
+      "required": [
+        "platform",
+        "os",
+        "form_factor",
+        "deployment_env"
+      ],
+      "additionalProperties": false
+    },
+    "interaction": {
+      "type": "object",
+      "properties": {
+        "profile": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "precision_pointer",
+            "keyboard_first",
+            "direct_touch",
+            "indirect_focus",
+            "gamepad",
+            "rotary",
+            "pen_stylus",
+            "voice",
+            "spatial",
+            "mixed",
+            "none",
+            "unknown",
+            null
+          ]
+        },
+        "primary_input": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "pointer",
+            "keyboard",
+            "touch",
+            "dpad",
+            "gamepad",
+            "rotary",
+            "pen",
+            "voice",
+            "spatial",
+            "mixed",
+            "none",
+            "unknown",
+            null
+          ]
+        },
+        "secondary_inputs": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "pointer",
+              "keyboard",
+              "touch",
+              "dpad",
+              "gamepad",
+              "rotary",
+              "pen",
+              "voice",
+              "spatial",
+              "none",
+              "unknown",
+              null
+            ]
+          },
+          "uniqueItems": true
+        },
+        "focus_model": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "direct",
+            "sequential",
+            "spatial",
+            "none",
+            "unknown",
+            null
+          ]
+        },
+        "viewing_distance": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "near",
+            "far",
+            "unknown",
+            null
+          ]
+        },
+        "orientation": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "portrait",
+            "landscape",
+            "adaptive",
+            "none",
+            "unknown",
+            null
+          ]
+        },
+        "accessibility": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "profile",
+        "primary_input"
+      ],
+      "additionalProperties": false
+    },
+    "application": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "gui",
+            "cli",
+            "tui",
+            "service",
+            "library",
+            "plugin",
+            "firmware",
+            "unknown",
+            null
+          ]
+        },
+        "runtime": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "local",
+            "networked",
+            "hybrid",
+            "unknown",
+            null
+          ]
+        },
+        "mode": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "foreground",
+            "kiosk",
+            "daemon",
+            "unknown",
+            null
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "runtime",
+        "mode"
+      ],
+      "additionalProperties": false
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "offline": {
+          "type": "boolean"
+        },
+        "hardware": {
+          "type": "string",
+          "minLength": 1
+        },
+        "latency_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "memory_mb": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "storage_mb": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "power": {
+          "type": "string",
+          "minLength": 1
+        },
+        "security": {
+          "type": "string",
+          "minLength": 1
+        },
+        "privacy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "distribution": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "local",
+            "browser",
+            "extension",
+            "service",
+            "store",
+            "unknown",
+            null
+          ]
+        },
+        "existing_stack": {
+          "type": "string",
+          "minLength": 1
+        },
+        "native_io": {
+          "type": "boolean"
+        },
+        "privileged": {
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "screenshots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "design": {
+          "type": "string",
+          "minLength": 1
+        },
+        "binaries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "reference_app": {
+          "type": "string",
+          "minLength": 1
+        },
+        "api_docs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "finished_work": {
+          "type": "boolean"
+        },
+        "verifiers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "properties": {
+        "permitted_ops": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "read",
+              "write",
+              "publish"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "external_access": {
+          "type": "boolean"
+        },
+        "destructive_ops": {
+          "type": "boolean"
+        },
+        "reverse_engineering": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "permitted_ops"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "taxonomy_version",
+    "task_type",
+    "artifact",
+    "work_kind",
+    "target",
+    "interaction",
+    "application",
+    "authority"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://batisseur.invalid/schemas/build-intent.schema.json",
+  "title": "BuildIntent v0.1"
+}

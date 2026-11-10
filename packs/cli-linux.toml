@@ -1,0 +1,30 @@
+id = "cli-linux"
+version = "0.1.0"
+taxonomy_version = "tt-1.1.0"
+platforms = ["linux"]
+operating_systems = ["linux"]
+form_factors = ["terminal"]
+deployment_envs = ["local"]
+application_kinds = ["cli", "tui"]
+modes = ["foreground"]
+runtimes = ["local", "networked", "hybrid"]
+interaction_profiles = ["keyboard_first"]
+primary_inputs = ["keyboard"]
+offline_supported = true
+native_io_supported = true
+stack = "rust"
+required_verifiers = ["exit-codes", "stdout-stderr", "tty", "signals"]
+conflicts = []
+official_references = ["https://doc.rust-lang.org/std/process/index.html"]
+dependency_cost = 2
+maintenance_cost = 2
+context_cost = 1
+runtime_cost = 1
+licensing_penalty = 0
+security_penalty = 0
+unsupported_penalty = 0
+
+[[framework_candidates]]
+id = "rust"
+name = "Rust command-line program"
+fit_notes = "Stable process and stream contracts."

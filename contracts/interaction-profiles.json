@@ -1,0 +1,35 @@
+{
+  "precision_pointer": [
+    "pointer"
+  ],
+  "keyboard_first": [
+    "keyboard"
+  ],
+  "direct_touch": [
+    "touch"
+  ],
+  "indirect_focus": [
+    "dpad"
+  ],
+  "gamepad": [
+    "gamepad"
+  ],
+  "rotary": [
+    "rotary"
+  ],
+  "pen_stylus": [
+    "pen"
+  ],
+  "voice": [
+    "voice"
+  ],
+  "spatial": [
+    "spatial"
+  ],
+  "mixed": [
+    "mixed"
+  ],
+  "none": [
+    "none"
+  ]
+}

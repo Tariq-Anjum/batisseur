@@ -1,0 +1,30 @@
+id = "android-tablet"
+version = "0.1.0"
+taxonomy_version = "tt-1.1.0"
+platforms = ["android"]
+operating_systems = ["android"]
+form_factors = ["tablet"]
+deployment_envs = ["store", "local"]
+application_kinds = ["gui"]
+modes = ["foreground"]
+runtimes = ["local", "networked", "hybrid"]
+interaction_profiles = ["direct_touch"]
+primary_inputs = ["touch"]
+offline_supported = true
+native_io_supported = true
+stack = "compose-adaptive"
+required_verifiers = ["touch-targets", "rotation", "window-resize"]
+conflicts = []
+official_references = ["https://developer.android.com/develop/ui/compose/adaptive"]
+dependency_cost = 2
+maintenance_cost = 2
+context_cost = 1
+runtime_cost = 1
+licensing_penalty = 0
+security_penalty = 0
+unsupported_penalty = 0
+
+[[framework_candidates]]
+id = "compose-adaptive"
+name = "Kotlin with adaptive Android UI"
+fit_notes = "Touch interfaces; validate resizing and orientation."

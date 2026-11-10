@@ -1,0 +1,30 @@
+id = "linux-kiosk-touch"
+version = "0.1.0"
+taxonomy_version = "tt-1.1.0"
+platforms = ["linux"]
+operating_systems = ["linux"]
+form_factors = ["kiosk"]
+deployment_envs = ["local"]
+application_kinds = ["gui"]
+modes = ["kiosk"]
+runtimes = ["local", "networked", "hybrid"]
+interaction_profiles = ["direct_touch"]
+primary_inputs = ["touch"]
+offline_supported = true
+native_io_supported = true
+stack = "qt-qml"
+required_verifiers = ["touch-targets", "rotation", "offline-start", "device-io"]
+conflicts = []
+official_references = ["https://doc.qt.io/qt-6/qtquick-index.html"]
+dependency_cost = 2
+maintenance_cost = 2
+context_cost = 1
+runtime_cost = 1
+licensing_penalty = 0
+security_penalty = 0
+unsupported_penalty = 0
+
+[[framework_candidates]]
+id = "qt-qml"
+name = "Qt Quick / QML"
+fit_notes = "Native device access; review Qt licensing for distribution."

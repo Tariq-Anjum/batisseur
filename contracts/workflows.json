@@ -1,0 +1,134 @@
+{
+  "clarify": {
+    "stages": [
+      "clarify"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "design": {
+    "stages": [
+      "design"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "plan": {
+    "stages": [
+      "plan"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "implement": {
+    "stages": [
+      "implement"
+    ],
+    "required_ops": [
+      "read",
+      "write"
+    ]
+  },
+  "debug": {
+    "stages": [
+      "reproduce",
+      "diagnose",
+      "fix",
+      "regress",
+      "audit"
+    ],
+    "required_ops": [
+      "read",
+      "write"
+    ]
+  },
+  "verify": {
+    "stages": [
+      "verify"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "review": {
+    "stages": [
+      "threat_model",
+      "static_analysis",
+      "dynamic_analysis",
+      "report"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "deliver": {
+    "stages": [
+      "deliver"
+    ],
+    "required_ops": [
+      "read",
+      "publish"
+    ]
+  },
+  "document": {
+    "stages": [
+      "document"
+    ],
+    "required_ops": [
+      "read",
+      "write"
+    ]
+  },
+  "research": {
+    "stages": [
+      "research"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "explore": {
+    "stages": [
+      "explore"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "setup": {
+    "stages": [
+      "setup"
+    ],
+    "required_ops": [
+      "read",
+      "write"
+    ]
+  },
+  "handoff": {
+    "stages": [
+      "handoff"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "answer": {
+    "stages": [
+      "answer"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  },
+  "unclear": {
+    "stages": [
+      "unclear"
+    ],
+    "required_ops": [
+      "read"
+    ]
+  }
+}

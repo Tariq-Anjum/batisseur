@@ -1,0 +1,30 @@
+id = "web-pwa"
+version = "0.1.0"
+taxonomy_version = "tt-1.1.0"
+platforms = ["web", "linux"]
+operating_systems = ["browser", "linux"]
+form_factors = ["browser", "kiosk"]
+deployment_envs = ["browser", "local"]
+application_kinds = ["gui"]
+modes = ["foreground", "kiosk"]
+runtimes = ["local", "networked", "hybrid"]
+interaction_profiles = ["direct_touch", "precision_pointer", "keyboard_first"]
+primary_inputs = ["touch", "pointer", "keyboard"]
+offline_supported = true
+native_io_supported = false
+stack = "web"
+required_verifiers = ["keyboard-only", "responsive-layout", "offline-cache", "browser-compatibility"]
+conflicts = ["native_io"]
+official_references = ["https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"]
+dependency_cost = 2
+maintenance_cost = 2
+context_cost = 1
+runtime_cost = 1
+licensing_penalty = 0
+security_penalty = 0
+unsupported_penalty = 0
+
+[[framework_candidates]]
+id = "web"
+name = "Web standards with optional service worker"
+fit_notes = "Browser deployment; offline capability needs explicit caching tests."

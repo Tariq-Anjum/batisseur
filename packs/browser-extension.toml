@@ -1,0 +1,30 @@
+id = "browser-extension"
+version = "0.1.0"
+taxonomy_version = "tt-1.1.0"
+platforms = ["browser"]
+operating_systems = ["browser"]
+form_factors = ["browser"]
+deployment_envs = ["extension"]
+application_kinds = ["plugin"]
+modes = ["foreground"]
+runtimes = ["local", "networked", "hybrid"]
+interaction_profiles = ["precision_pointer", "keyboard_first"]
+primary_inputs = ["pointer", "keyboard"]
+offline_supported = true
+native_io_supported = true
+stack = "webextension"
+required_verifiers = ["permissions", "content-isolation", "browser-compatibility"]
+conflicts = []
+official_references = ["https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"]
+dependency_cost = 2
+maintenance_cost = 2
+context_cost = 1
+runtime_cost = 1
+licensing_penalty = 0
+security_penalty = 0
+unsupported_penalty = 0
+
+[[framework_candidates]]
+id = "webextension"
+name = "WebExtensions APIs"
+fit_notes = "Browser-specific permissions and API support require verification."

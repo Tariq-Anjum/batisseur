@@ -1,0 +1,30 @@
+id = "macos-desktop"
+version = "0.1.0"
+taxonomy_version = "tt-1.1.0"
+platforms = ["macos"]
+operating_systems = ["macos"]
+form_factors = ["desktop"]
+deployment_envs = ["local", "store"]
+application_kinds = ["gui"]
+modes = ["foreground"]
+runtimes = ["local", "networked", "hybrid"]
+interaction_profiles = ["precision_pointer", "keyboard_first"]
+primary_inputs = ["pointer", "keyboard"]
+offline_supported = true
+native_io_supported = true
+stack = "swiftui"
+required_verifiers = ["keyboard-only", "shortcuts", "window-resize"]
+conflicts = []
+official_references = ["https://developer.apple.com/documentation/swiftui"]
+dependency_cost = 2
+maintenance_cost = 2
+context_cost = 1
+runtime_cost = 1
+licensing_penalty = 0
+security_penalty = 0
+unsupported_penalty = 0
+
+[[framework_candidates]]
+id = "swiftui"
+name = "SwiftUI or AppKit"
+fit_notes = "Native desktop integration; confirm API availability."

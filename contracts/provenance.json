@@ -1,0 +1,8 @@
+{
+  "version": "tt-1.1.0",
+  "revision": 4,
+  "source_url": "https://github.com/Tariq-Anjum/tisserand/blob/main/taxonomy/tt-1.toml",
+  "license": "MIT",
+  "sha256": "301e80ce7953b245dea13c6fe3e8944d8d37050a6ec6595b8d239c823f2df6c9",
+  "note": "Content hash pins the vendored snapshot; upstream main may move."
+}

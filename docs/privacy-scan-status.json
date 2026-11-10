@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "matches": 0,
+  "stderr_empty": true,
+  "capture": "pipe; log written after process exit"
+}

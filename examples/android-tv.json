@@ -1,0 +1,29 @@
+{
+  "taxonomy_version": "tt-1.1.0",
+  "task_type": "implement",
+  "artifact": "code",
+  "work_kind": "new_product",
+  "target": {
+    "platform": "android",
+    "os": "android",
+    "form_factor": "tv",
+    "deployment_env": "store"
+  },
+  "interaction": {
+    "profile": "indirect_focus",
+    "primary_input": "dpad",
+    "focus_model": "spatial"
+  },
+  "application": {
+    "kind": "gui",
+    "runtime": "local",
+    "mode": "foreground"
+  },
+  "constraints": {},
+  "authority": {
+    "permitted_ops": [
+      "read",
+      "write"
+    ]
+  }
+}

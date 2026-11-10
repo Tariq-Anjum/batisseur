@@ -1,0 +1,30 @@
+id = "daemon-linux"
+version = "0.1.0"
+taxonomy_version = "tt-1.1.0"
+platforms = ["linux"]
+operating_systems = ["linux"]
+form_factors = ["server"]
+deployment_envs = ["service", "local"]
+application_kinds = ["service"]
+modes = ["daemon"]
+runtimes = ["local", "networked", "hybrid"]
+interaction_profiles = ["none"]
+primary_inputs = ["none"]
+offline_supported = true
+native_io_supported = true
+stack = "rust"
+required_verifiers = ["restart", "idempotence", "resource-leaks", "signals"]
+conflicts = []
+official_references = ["https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html"]
+dependency_cost = 2
+maintenance_cost = 2
+context_cost = 1
+runtime_cost = 1
+licensing_penalty = 0
+security_penalty = 0
+unsupported_penalty = 0
+
+[[framework_candidates]]
+id = "rust"
+name = "Rust service"
+fit_notes = "Explicit lifecycle and bounded resource usage."

@@ -1,0 +1,10 @@
+{
+  "runs": 3,
+  "byte_identical": true,
+  "output_sha256": [
+    "af09e3917f1bdee1bed8a6702c8b13209424642f1b2345061fba9af70f65940b",
+    "af09e3917f1bdee1bed8a6702c8b13209424642f1b2345061fba9af70f65940b",
+    "af09e3917f1bdee1bed8a6702c8b13209424642f1b2345061fba9af70f65940b"
+  ],
+  "cases_per_run": 16
+}
