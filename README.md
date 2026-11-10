@@ -41,7 +41,6 @@ permissions. The CLI executes no plan and writes no run state.
 | tests/ | Routing, schema, benchmark and CLI subprocess checks |
 | skill/batisseur/ | Thin optional skill; not installed by this project |
 | docs/SPEC.md | Routing cascade, pack contract, state layout and boundaries |
-| docs/VERIFICATION.md | Verification criteria and evidence |
 
 ## Checks
 
