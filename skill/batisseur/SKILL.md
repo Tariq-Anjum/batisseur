@@ -14,7 +14,10 @@ Do not install tools, change permissions, or start services through this skill.
 2. Put candidate typed values in an intent JSON file. Leave unknown values
    null/unknown or absent; never fabricate missing information.
 3. Run `batisseur route intent.json --json` (or
-   `cargo run -q -- route intent.json --json` from the checkout).
+   `cargo run -q -- route intent.json --json` from the checkout; from any other
+   directory add `--offline --manifest-path <checkout>/Cargo.toml`, because Cargo
+   reads `.cargo/config.toml` from the current directory). Fill every required
+   field you can from the task; `examples/cli-linux.json` is a complete local CLI intent.
 4. If route_status is needs_information, ask for the listed missing_fields.
    Remediation keys such as supported_pack require a registry review;
    do not insert them as intent properties.

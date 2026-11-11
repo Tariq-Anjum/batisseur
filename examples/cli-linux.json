@@ -1,0 +1,29 @@
+{
+    "taxonomy_version": "tt-1.1.0",
+    "task_type": "implement",
+    "artifact": "code",
+    "work_kind": "feature",
+    "target": {
+        "platform": "linux",
+        "os": "linux",
+        "form_factor": "terminal",
+        "deployment_env": "local"
+    },
+    "interaction": {
+        "profile": "keyboard_first",
+        "primary_input": "keyboard",
+        "focus_model": "sequential"
+    },
+    "application": {
+        "kind": "cli",
+        "runtime": "local",
+        "mode": "foreground"
+    },
+    "constraints": {},
+    "authority": {
+        "permitted_ops": [
+            "read",
+            "write"
+        ]
+    }
+}
