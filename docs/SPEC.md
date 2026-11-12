@@ -165,7 +165,7 @@ successful routes (including abstentions) exit 0.
 
 ## Pack contract
 
-Eight versioned TOML packs are compiled into the executable, loaded as data
+Nine versioned TOML packs are compiled into the executable, loaded as data
 when routing or inspecting them. Adding/editing a pack requires rebuilding;
 there is no runtime plugin loading or arbitrary code execution.
 

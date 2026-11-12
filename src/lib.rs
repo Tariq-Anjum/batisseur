@@ -58,6 +58,7 @@ pub fn packs() -> Result<Vec<Pack>, String> {
         include_str!("../packs/cli-linux.toml"),
         include_str!("../packs/daemon-linux.toml"),
         include_str!("../packs/browser-extension.toml"),
+        include_str!("../packs/linux-desktop-gui.toml"),
     ]
     .iter()
     .map(|s| toml::from_str::<Pack>(s).map_err(|e| e.to_string()))

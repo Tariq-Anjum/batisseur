@@ -124,3 +124,22 @@ fn unmodeled_hard_limits_require_information() {
         json!(["constraints.memory_mb_evidence"])
     );
 }
+#[test]
+fn linux_desktop_gui_routes_without_touching_macos_or_kiosk() {
+    let intent: serde_json::Value =
+        serde_json::from_str(include_str!("../examples/linux-desktop-gui.json")).unwrap();
+    let result = route(&intent).unwrap();
+    assert_eq!(result["route_status"], "ok");
+    assert_eq!(result["selected_pack"], "linux-desktop-gui");
+    assert_eq!(result["risk_gate"]["status"], "allowed");
+    // A macOS desktop intent must still select the macOS pack.
+    let mut mac = intent.clone();
+    mac["target"]["platform"] = json!("macos");
+    mac["target"]["os"] = json!("macos");
+    assert_eq!(route(&mac).unwrap()["selected_pack"], "macos-desktop");
+    // Kiosk touch fixtures are unchanged by the new pack.
+    assert_eq!(
+        route(&fixture("linux-kiosk-touch")).unwrap()["selected_pack"],
+        "linux-kiosk-touch"
+    );
+}

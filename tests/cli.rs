@@ -29,7 +29,7 @@ fn frozen_benchmark_and_three_process_runs() {
 fn lists_and_shows_embedded_packs() {
     let out = run(&["packs", "list"]);
     assert!(out.status.success());
-    assert_eq!(String::from_utf8(out.stdout).unwrap().lines().count(), 8);
+    assert_eq!(String::from_utf8(out.stdout).unwrap().lines().count(), 9);
     let out = run(&["packs", "show", "android-tv"]);
     assert!(out.status.success());
     let pack: Value = serde_json::from_slice(&out.stdout).unwrap();

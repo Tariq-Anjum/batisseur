@@ -1,0 +1,29 @@
+{
+    "taxonomy_version": "tt-1.1.0",
+    "task_type": "implement",
+    "artifact": "code",
+    "work_kind": "feature",
+    "target": {
+        "platform": "linux",
+        "os": "linux",
+        "form_factor": "desktop",
+        "deployment_env": "local"
+    },
+    "interaction": {
+        "profile": "precision_pointer",
+        "primary_input": "pointer",
+        "focus_model": "sequential"
+    },
+    "application": {
+        "kind": "gui",
+        "runtime": "local",
+        "mode": "foreground"
+    },
+    "constraints": {},
+    "authority": {
+        "permitted_ops": [
+            "read",
+            "write"
+        ]
+    }
+}

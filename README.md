@@ -36,7 +36,7 @@ permissions. The CLI executes no plan and writes no run state.
 | src/ | Deterministic routing library and CLI |
 | contracts/ | Pinned taxonomy, provenance, family/interaction maps, workflows |
 | schemas/ | JSON Schema 2020-12 input and output contracts |
-| packs/ | Eight platform/interaction packs and generic official references |
+| packs/ | Nine platform/interaction packs and generic official references |
 | bench/ | Frozen BuildBench v0 cases and expected routes |
 | tests/ | Routing, schema, benchmark and CLI subprocess checks |
 | skill/batisseur/ | Thin optional skill; not installed by this project |
