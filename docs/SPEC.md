@@ -1,4 +1,4 @@
-# batisseur v0.1.0 specification
+# batisseur v0.2.0 specification
 
 Status: experimental. This version is a deterministic, advisory router, not
 an executor. It consumes typed JSON, selects one sufficient platform capability

@@ -1,7 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.2.0
 
+- Prebuilt static Linux x86_64 release binary with SHA-256 checksum, published by a tag-triggered
+  release workflow; `install.sh` installs it to `~/.local/bin` after checksum verification.
+- `--version` reads the crate version.
 - Add the `linux-desktop-gui` pack (Rust + Slint, GTK 4 alternative) and a complete example intent;
   frozen BuildBench v0 unchanged.
 

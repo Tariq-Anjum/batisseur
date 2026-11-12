@@ -1,7 +1,7 @@
 use serde_json::{json, Value};
 use std::{env, fs, process::ExitCode};
 
-const HELP:&str="batisseur experimental v0.1.0\n\nUSAGE:\n  batisseur route <intent.json> [--json]\n  batisseur validate <intent.json>\n  batisseur packs list\n  batisseur packs show <id>\n  batisseur bench [--json]\n\nRouting is advisory and performs no execution. See docs/SPEC.md and schemas/.";
+const HELP:&str="batisseur v0.2.0 (experimental)\n\nUSAGE:\n  batisseur route <intent.json> [--json]\n  batisseur validate <intent.json>\n  batisseur packs list\n  batisseur packs show <id>\n  batisseur bench [--json]\n\nRouting is advisory and performs no execution. See docs/SPEC.md and schemas/.";
 fn read(path: &str) -> Result<Value, String> {
     let bytes = fs::read(path).map_err(|e| format!("cannot read intent: {e}"))?;
     serde_json::from_slice(&bytes).map_err(|e| format!("invalid intent JSON: {e}"))
@@ -17,7 +17,7 @@ fn run(args: &[String]) -> Result<bool, String> {
     let a: Vec<&str> = args.iter().map(String::as_str).collect();
     match a.as_slice() {
         [] | ["--help"] | ["-h"] => println!("{HELP}"),
-        ["--version"] => println!("batisseur 0.1.0"),
+        ["--version"] => println!("batisseur {}", env!("CARGO_PKG_VERSION")),
         ["route", file] | ["route", file, "--json"] => {
             let r = batisseur::route(&read(file)?)?;
             if a.len() == 3 {

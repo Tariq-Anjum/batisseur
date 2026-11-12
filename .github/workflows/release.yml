@@ -1,0 +1,39 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check tag matches Cargo.toml version
+        run: test "v$(grep -m1 '^version' Cargo.toml | cut -d'"' -f2)" = "$GITHUB_REF_NAME"
+      - name: Provision locked dependencies
+        run: cargo fetch --locked --config net.offline=false
+      - name: Full checks
+        run: |
+          cargo fmt --check
+          cargo clippy --locked --all-targets -- -D warnings
+          cargo test --locked
+          cargo run --locked -q -- bench
+      - name: Static musl build
+        run: |
+          rustup target add x86_64-unknown-linux-musl
+          cargo build --locked --release --target x86_64-unknown-linux-musl
+      - name: Package
+        run: |
+          name="batisseur-${GITHUB_REF_NAME}-x86_64-unknown-linux-musl"
+          mkdir "$name"
+          cp target/x86_64-unknown-linux-musl/release/batisseur README.md LICENSE CHANGELOG.md "$name/"
+          cp -r examples "$name/"
+          tar -czf "$name.tar.gz" "$name"
+          sha256sum "$name.tar.gz" > "$name.tar.gz.sha256"
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" batisseur-*.tar.gz batisseur-*.tar.gz.sha256 \
+            --title "batisseur $GITHUB_REF_NAME" --notes-file CHANGELOG.md --verify-tag

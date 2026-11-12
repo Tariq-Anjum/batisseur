@@ -1,6 +1,6 @@
 # batisseur
 
-**experimental v0.1.0** — a Rust CLI that routes typed software-build intents
+**v0.2.0 (experimental)** — a Rust CLI that routes typed software-build intents
 to a small platform capability set. It explains scores, abstains on missing
 information and ambiguous choices, and reports permission gaps.
 
@@ -8,7 +8,18 @@ The pinned [tisserand taxonomy](https://github.com/Tariq-Anjum/tisserand) is the
 shared task-type contract (tt-1.1.0). Platform and interaction fields filter
 within that type; they never choose a replacement type.
 
-## Quick start
+## Install
+
+Prebuilt static binary for Linux x86_64 (checksum-verified, installs to `~/.local/bin`, no root):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Tariq-Anjum/batisseur/main/install.sh | sh
+batisseur --version
+```
+
+Or download the `.tar.gz` and `.sha256` from the GitHub Releases page and check them with `sha256sum -c`.
+
+## Build from source
 
 Build with a Rust toolchain and the dependencies in Cargo.lock available in
 your Cargo cache. Repository configuration enforces offline dependency access.
